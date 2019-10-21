@@ -1,0 +1,20 @@
+.placeholder::placeholder {
+    color: #000000;
+}
+
+.login-button {
+    box-shadow: 0px 3px 6px rgba(255, 102, 0, 0.5);
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    color: #BCBCBC;
+}
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
