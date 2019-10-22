@@ -2,7 +2,17 @@ import React from "react";
 import "./SignIn.css";
 import email from "./icons8_mail_filled_50px_7.png";
 import password from "./icons8_password_24px.png";
+import { makeStyles } from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
+
+const useStyles = makeStyles(theme => ({
+  progress: {
+    margin: theme.spacing(2)
+  }
+}));
+
 const SignIn = props => {
+  const classes = useStyles();
   return (
     <div style={{ marginTop: 40, display: "flex", flexDirection: "column" }}>
       <div
@@ -84,9 +94,14 @@ const SignIn = props => {
           alignItems: "center",
           justifyContent: "center",
           marginTop: 30,
-          color: "#fff"
+          color: "#fff",
+          cursor: "pointer"
         }}
+        onClick={props.onClick}
       >
+        {props.CircularProgress && (
+          <CircularProgress className={classes.progress} />
+        )}
         <span>Login</span>
       </div>
       <div className="social">
